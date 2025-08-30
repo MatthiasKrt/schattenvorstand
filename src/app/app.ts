@@ -1,12 +1,26 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgxSpotlightComponent } from '@omnedia/ngx-spotlight';
+import { NgxLightRaysComponent } from '@omnedia/ngx-light-rays';
+import { NgxCrypticTextComponent } from '@omnedia/ngx-cryptic-text';
+import { NgxLampComponent } from '@omnedia/ngx-lamp';
+import { NgxAuroraComponent } from '@omnedia/ngx-aurora';
+import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
+import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    NgxSpotlightComponent,
+    NgxLightRaysComponent,
+    NgxCrypticTextComponent,
+    NgxLampComponent,
+    NgxAuroraComponent,
+    NgxStarrySkyComponent,
+    NgxNeonUnderlineComponent,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('schattenvorstand');
+  protected title = signal('Schattenvorstand');
 }
