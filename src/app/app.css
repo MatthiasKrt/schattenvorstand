@@ -28,4 +28,25 @@
     background-size: cover;
     text-align: center;
   }
+
+  h2 {
+    font-size: clamp(1rem, 6vw, 2.5rem);
+
+    font-weight: normal;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Dunklerer Spotlight-Effekt */
+    background-image: radial-gradient(
+      circle at center,
+      rgba(180, 180, 180, 0.4) 0%,
+      rgba(100, 100, 100, 0.5) 30%,
+      rgba(40, 40, 40, 0.8) 80%,
+      rgba(23, 23, 23, 1) 100%
+    );
+
+    background-size: cover;
+    text-align: center;
+  }
 }

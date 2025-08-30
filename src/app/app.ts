@@ -23,4 +23,5 @@ import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
 })
 export class App {
   protected title = signal('Schattenvorstand');
+  protected subtitle = signal('Wir trinken im Schatten, während der Vorstand sich abrackert');
 }
