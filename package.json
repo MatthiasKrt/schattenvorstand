@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "gh-build": "ng build --base-href 'https://matthiaskrt.github.io/schattenvorstand/'",
+    "gh-build": "ng build",
     "gh-deploy": "npx angular-cli-ghpages --dir=dist/schattenvorstand/browser --no-silent"
   },
   "prettier": {
