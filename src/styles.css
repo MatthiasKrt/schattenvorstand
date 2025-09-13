@@ -1,1 +1,54 @@
 @import 'tailwindcss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 6rem);
+    font-weight: bold;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Dunkler Spotlight-Effekt */
+    background-image: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.6) 0%,
+      /* heller Spot in der Mitte, nicht komplett weiß */ rgba(180, 180, 180, 0.5) 20%,
+      /* mittleres Grau für sanften Übergang */ rgba(100, 100, 100, 0.6) 60%,
+      /* dunkler, aber lesbar */ rgba(23, 23, 23, 1) 100% /* exakt Hintergrundfarbe außen */
+    );
+
+    background-size: cover;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 6vw, 2.5rem);
+
+    font-weight: normal;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Dunklerer Spotlight-Effekt */
+    background-image: radial-gradient(
+      circle at center,
+      rgba(180, 180, 180, 0.4) 0%,
+      rgba(100, 100, 100, 0.5) 30%,
+      rgba(40, 40, 40, 0.8) 80%,
+      rgba(23, 23, 23, 1) 100%
+    );
+
+    background-size: cover;
+    text-align: center;
+  }
+}
