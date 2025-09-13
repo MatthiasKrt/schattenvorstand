@@ -1,0 +1,5 @@
+<p-dock [model]="menuItems" position="top">
+    <ng-template #item let-item>
+        <img [pTooltip]="item.label" [src]="item.icon" [alt]="item.label" width="100%" (click)="item.routerLink && router.navigate([item.routerLink])" />
+    </ng-template>
+</p-dock>
