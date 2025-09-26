@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BeitrittDaten } from './beitritt-daten';
 import { SelectModule } from 'primeng/select';
 import { TextareaModule } from 'primeng/textarea';
+import { GETRAENKE } from './getraenke';
 @Component({
   selector: 'app-beitritt-form',
   imports: [
@@ -28,13 +29,7 @@ export class BeitrittForm {
 
   protected beitrittForm;
 
-  protected getraenkeOptions = [
-    { label: 'Bier', value: 'Bier' },
-    { label: 'Radler', value: 'Radler' },
-    { label: 'Cocktail', value: 'Cocktail' },
-    { label: 'Cola (Korn) natürlich', value: 'ColaKorn' },
-    { label: 'Wasser (nur im Notfall)', value: 'Wasser' },
-  ];
+  protected getraenkeOptions = GETRAENKE;
 
   constructor() {
     this.beitrittForm = this.createForm();

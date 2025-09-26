@@ -28,11 +28,13 @@
       id="lieblingsgetraenk"
       [options]="getraenkeOptions"
       formControlName="lieblingsgetraenk"
-      placeholder="Wähle dein Schattengetränk"
+      [editable]="true"
+      placeholder="Wähle dein Lieblingsgetränk"
       class="w-full appearance-none! border! border-white/10! w-full! outline-0! bg-white/10! text-white! placeholder:text-white/70! rounded-3xl! shadow-sm!"
     ></p-select>
-    @if (beitrittForm.controls['lieblingsgetraenk'].invalid && beitrittForm.controls['lieblingsgetraenk'].touched) {
-      <small class="text-red-500"> Bitte wähle dein Lieblingsgetränk! </small>
+    @if (beitrittForm.controls['lieblingsgetraenk'].invalid &&
+    beitrittForm.controls['lieblingsgetraenk'].touched) {
+    <small class="text-red-500"> Bitte wähle dein Lieblingsgetränk! </small>
     }
   </div>
 
