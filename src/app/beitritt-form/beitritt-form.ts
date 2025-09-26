@@ -24,6 +24,7 @@ import { GETRAENKE } from './getraenke';
 import { MessageService } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { LOADING_TEXTS } from './loading-text';
+import { BEITRITTS_GRUENDE } from './beitritts-gruende';
 
 @Component({
   selector: 'app-beitritt-form',
@@ -106,7 +107,7 @@ export class BeitrittForm {
         this.minLoadingDelay;
 
       setTimeout(() => {
-        this.showMessage();
+        this.showBeitrittsGrund();
         this.beitrittForm.reset();
         this.isLoading.set(false);
 
@@ -115,11 +116,23 @@ export class BeitrittForm {
     }
   }
 
-  private showMessage(): void {
+  /**
+   * Zeigt eine Nachricht mit dem Grund für die Aufnahme oder Ablehnung an.
+   */
+  private showBeitrittsGrund(): void {
+    const aufgenommen = Math.random() < 0.5;
+
+    const grundList = aufgenommen ? BEITRITTS_GRUENDE.aufgenommen : BEITRITTS_GRUENDE.abgelehnt;
+
+    const severity = aufgenommen ? 'success' : 'error';
+    const summary = aufgenommen ? 'Aufnahme erfolgreich!' : 'Aufnahme abgelehnt';
+
+    const grund = grundList[Math.floor(Math.random() * grundList.length)];
+
     this.messageService.add({
-      severity: 'success',
-      summary: 'Formular gesendet',
-      detail: 'Vielen Dank für Ihre Beitrittsanfrage!',
+      severity: severity,
+      summary: summary,
+      detail: grund,
       sticky: true,
     });
   }
