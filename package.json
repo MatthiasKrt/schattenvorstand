@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gh-build": "ng build",
-    "gh-deploy": "npx angular-cli-ghpages --dir=dist/schattenvorstand/browser --no-silent"
+    "gh-deploy": "npx angular-cli-ghpages --dir=dist/schattenvorstand/browser --no-silent --cname=schattenvorstand.de"
   },
   "prettier": {
     "printWidth": 100,
