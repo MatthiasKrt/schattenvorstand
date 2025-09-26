@@ -1,0 +1,15 @@
+export const LOADING_TEXTS = [
+  'Hmm… passt diese Person wirklich zu uns?',
+  'Checken mal, ob genug Humor vorhanden ist…',
+  'Braucht die Person wirklich Bier oder nur Wasser?',
+  'Passt diese Person überhaupt in unsere Runde?',
+  'Noch unsicher… kann die Person lachen, wenn wir lachen?',
+  'Bewerten gerade Trinkfestigkeit und Schlagfertigkeit',
+  'Formular? Check. Persönlichkeit? Noch in Prüfung',
+  'Hmm… Vorstand würde zustimmen, wir hoffentlich auch',
+  'Passt die Person ins Chaos oder eher ins Büro?',
+  'Ladet noch… wir wägen das Bier gegen die Qualifikation ab',
+  'Noch ein kurzer Test: Hat die Person Humor?',
+  'Die Frage des Abends: Kann die Person unser Niveau halten?',
+  'Wir diskutieren intern… naja, eher über die Getränke',
+];
