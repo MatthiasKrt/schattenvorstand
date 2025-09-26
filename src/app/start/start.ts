@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { NgxCrypticTextComponent } from '@omnedia/ngx-cryptic-text';
+import { SUBLINES } from './sublines';
 
 @Component({
   selector: 'app-start',
@@ -7,7 +8,20 @@ import { NgxCrypticTextComponent } from '@omnedia/ngx-cryptic-text';
   templateUrl: './start.html',
   styleUrl: './start.css'
 })
-export class Start {
+export class Start implements OnInit {
   protected title = signal('Schattenvorstand');
-  protected subtitle = signal('Wir trinken im Schatten, während der Vorstand sich abrackert');
+  protected subtitle = signal('');
+
+  ngOnInit() {
+    this.setRandomSubline();
+  }
+
+  /**
+   * Setzt eine zufällige Subline aus der SUBLINES Liste.
+   */
+  private setRandomSubline(): void {
+    const randomIndex = Math.floor(Math.random() * SUBLINES.length);
+    this.subtitle.set(SUBLINES[randomIndex]);
+  }
+  
 }
